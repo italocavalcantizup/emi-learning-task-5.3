@@ -76,7 +76,7 @@
                                                     <action selector="botaoResetPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cxv-qs-IpC"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-TR-7tX" userLabel="Incremento Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-TR-7tX" userLabel="Incremento Stack View">
                                                 <rect key="frame" x="256" y="0.0" width="94" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="padrão de incremento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-sq-e8i" userLabel="Incremento Titulo Label">
@@ -86,7 +86,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-ZJ-4j1" userLabel="Incremento Valor Label">
-                                                        <rect key="frame" x="38.5" y="33" width="17" height="43"/>
+                                                        <rect key="frame" x="0.0" y="33" width="94" height="43"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -98,10 +98,6 @@
                                                         </connections>
                                                     </stepper>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="KeU-sq-e8i" firstAttribute="trailing" secondItem="xma-kg-2Gl" secondAttribute="trailing" id="LhR-p4-J3v"/>
-                                                    <constraint firstItem="KeU-sq-e8i" firstAttribute="leading" secondItem="xma-kg-2Gl" secondAttribute="leading" id="jfE-PS-Jhb"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
