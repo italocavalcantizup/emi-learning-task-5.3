@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contador View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearningTask_5_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ContadorViewController" customModule="LearningTask_5_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system" buttonSize="large">
                                                             <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="botaoMenosPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iH-Cz-fUr"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rom-5r-HK2" userLabel="Mais Button">
                                                         <rect key="frame" x="175" y="0.0" width="175" height="50"/>
@@ -52,6 +55,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" buttonSize="large">
                                                             <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="botaoMaisPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIk-g1-weR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -66,6 +72,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Reset">
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="botaoResetPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cxv-qs-IpC"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-TR-7tX" userLabel="Incremento Stack View">
                                                 <rect key="frame" x="256" y="0.0" width="94" height="112"/>
@@ -84,6 +93,9 @@
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xma-kg-2Gl" userLabel="Incremento Stepper">
                                                         <rect key="frame" x="0.0" y="80" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="stepperPressionado:" destination="BYZ-38-t0r" eventType="valueChanged" id="tOM-oi-lUd"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                                 <constraints>
@@ -106,6 +118,11 @@
                             <constraint firstItem="odS-of-kKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z6x-Jd-QSp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contadorLabel" destination="aCN-tn-pYZ" id="Rpi-Z4-gRm"/>
+                        <outlet property="containerView" destination="8bC-Xf-vdC" id="50w-6N-oGt"/>
+                        <outlet property="incrementoLabel" destination="eLf-ZJ-4j1" id="eYm-sD-T3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
