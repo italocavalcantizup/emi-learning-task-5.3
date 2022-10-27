@@ -17,8 +17,11 @@ class ContadorViewController: UIViewController {
     }
     
     @IBOutlet var containerView: UIView!
+    
     @IBOutlet weak var contadorLabel: UILabel!
+    
     @IBOutlet weak var incrementoLabel: UILabel!
+    @IBOutlet weak var incrementoStepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,28 +33,31 @@ class ContadorViewController: UIViewController {
 
     
     @IBAction func botaoMenosPressionado(_ sender: UIButton) {
-        contador?.valor -= 1
+        contador?.calcula(operador: .decrementa)
     }
     
     @IBAction func botaoMaisPressionado(_ sender: UIButton) {
-        contador?.valor += 1
+        contador?.calcula(operador: .incrementa)
     }
     
     @IBAction func botaoResetPressionado(_ sender: UIButton) {
-        print("botao Reset")
+        contador?.reseta()
     }
     
     @IBAction func stepperPressionado(_ sender: UIStepper) {
-        print("botao Stepper")
+        contador?.valorIncremento = Int(sender.value)
     }
     
     func atualizaView(para contador: Contador) {
-        contadorLabel.text = String(describing: contador.valor)
+        contadorLabel.text = String(describing: contador.valorContador)
+        incrementoLabel.text = String(describing: contador.valorIncremento)
+        incrementoStepper.value = Double(contador.valorIncremento)
+        
         alteraBackground()
     }
     
     func alteraBackground() {
-        if let valor = contador?.valor, valor < 0 {
+        if let valor = contador?.valorContador, valor < 0 {
             containerView.backgroundColor = UIColor(named: "Almond")
         } else {
             containerView.backgroundColor = UIColor(named: "Satin Linen")

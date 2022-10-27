@@ -122,6 +122,7 @@
                         <outlet property="contadorLabel" destination="aCN-tn-pYZ" id="Rpi-Z4-gRm"/>
                         <outlet property="containerView" destination="8bC-Xf-vdC" id="50w-6N-oGt"/>
                         <outlet property="incrementoLabel" destination="eLf-ZJ-4j1" id="eYm-sD-T3V"/>
+                        <outlet property="incrementoStepper" destination="xma-kg-2Gl" id="NOU-mb-VEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

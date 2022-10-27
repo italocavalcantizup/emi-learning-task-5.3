@@ -13,6 +13,21 @@ enum Operador {
 }
 
 struct Contador {
-    var valor = 0
+    var valorContador = 0
+    var valorIncremento = 1
+    
+    mutating func calcula(operador: Operador) {
+        switch operador {
+        case .incrementa:
+            valorContador += valorIncremento
+        default:
+            valorContador -= valorIncremento
+        }
+    }
+    
+    mutating func reseta() {
+        valorContador = 0
+        valorIncremento = 1
+    }
     
 }

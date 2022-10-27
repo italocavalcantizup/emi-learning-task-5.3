@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let contador = Contador()
-        var controller = window!.rootViewController as! ContadorViewController
+        let controller = window!.rootViewController as! ContadorViewController
         controller.contador = contador
     }
 
